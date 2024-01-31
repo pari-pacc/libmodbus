@@ -29,25 +29,22 @@
 #define LIBMODBUS_VERSION_MICRO (6)
 
 /* The full version, like 1.2.3 */
-#define LIBMODBUS_VERSION        3.1.6
+#define LIBMODBUS_VERSION 3.1.6
 
 /* The full version, in string form (suited for string concatenation)
  */
 #define LIBMODBUS_VERSION_STRING "3.1.6"
 
 /* Numerically encoded version, eg. v1.2.3 is 0x010203 */
-#define LIBMODBUS_VERSION_HEX ((LIBMODBUS_VERSION_MAJOR << 16) |  \
-                               (LIBMODBUS_VERSION_MINOR <<  8) |  \
-                               (LIBMODBUS_VERSION_MICRO <<  0))
+#define LIBMODBUS_VERSION_HEX                                         \
+    ((LIBMODBUS_VERSION_MAJOR << 16) | (LIBMODBUS_VERSION_MINOR << 8) \
+     | (LIBMODBUS_VERSION_MICRO << 0))
 
 /* Evaluates to True if the version is greater than @major, @minor and @micro
  */
-#define LIBMODBUS_VERSION_CHECK(major,minor,micro)      \
-    (LIBMODBUS_VERSION_MAJOR > (major) ||               \
-     (LIBMODBUS_VERSION_MAJOR == (major) &&             \
-      LIBMODBUS_VERSION_MINOR > (minor)) ||             \
-     (LIBMODBUS_VERSION_MAJOR == (major) &&             \
-      LIBMODBUS_VERSION_MINOR == (minor) &&             \
-      LIBMODBUS_VERSION_MICRO >= (micro)))
+#define LIBMODBUS_VERSION_CHECK(major, minor, micro)                              \
+    (LIBMODBUS_VERSION_MAJOR > (major)                                            \
+     || (LIBMODBUS_VERSION_MAJOR == (major) && LIBMODBUS_VERSION_MINOR > (minor)) \
+     || (LIBMODBUS_VERSION_MAJOR == (major) && LIBMODBUS_VERSION_MINOR == (minor) && LIBMODBUS_VERSION_MICRO >= (micro)))
 
 #endif /* MODBUS_VERSION_H */

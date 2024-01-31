@@ -7,11 +7,11 @@
 #ifndef MODBUS_TCP_PRIVATE_H
 #define MODBUS_TCP_PRIVATE_H
 
-#define _MODBUS_TCP_HEADER_LENGTH      7
+#define _MODBUS_TCP_HEADER_LENGTH     7
 #define _MODBUS_TCP_PRESET_REQ_LENGTH 12
-#define _MODBUS_TCP_PRESET_RSP_LENGTH  8
+#define _MODBUS_TCP_PRESET_RSP_LENGTH 8
 
-#define _MODBUS_TCP_CHECKSUM_LENGTH    0
+#define _MODBUS_TCP_CHECKSUM_LENGTH 0
 
 /* In both structures, the transaction ID must be placed on first position
    to have a quick access not dependent of the TCP backend */
@@ -28,7 +28,7 @@ typedef struct _modbus_tcp {
 } modbus_tcp_t;
 
 #define _MODBUS_TCP_PI_NODE_LENGTH    1025
-#define _MODBUS_TCP_PI_SERVICE_LENGTH   32
+#define _MODBUS_TCP_PI_SERVICE_LENGTH 32
 
 typedef struct _modbus_tcp_pi {
     /* Transaction ID */
